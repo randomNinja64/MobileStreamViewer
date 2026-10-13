@@ -1,6 +1,5 @@
 # This file contains the routes for homepage related tasks
-from flask import request, session, render_template, redirect, url_for, Blueprint
-import invidioushandler
+from flask import render_template, Blueprint
 
 # Define homepage blueprint
 homepage = Blueprint('homepage', __name__)

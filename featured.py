@@ -1,6 +1,6 @@
 # This file contains the routes for featured page related tasks
-from flask import request, session, render_template, redirect, url_for, Blueprint
-import invidioushandler
+from flask import render_template, Blueprint
+import ytdlphandler
 
 # Define homepage blueprint
 featured = Blueprint('featured', __name__)
@@ -8,5 +8,4 @@ featured = Blueprint('featured', __name__)
 # featuredPage route
 @featured.route('/featuredPage')
 def featuredPage():
-    # Render homepage template
-    return render_template('featured.html', title = "Featured", videos = invidioushandler.getFeatured())
+    return render_template('featured.html', title = "Featured", videos = ytdlphandler.trending())
